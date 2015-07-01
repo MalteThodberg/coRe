@@ -5,12 +5,18 @@
 \title{Common Packages}
 \usage{
 core_packages()
+
+core_packages()
 }
 \value{
+Character vector
+
 Character vector
 }
 \description{
 Simply return a vector with names of most common packages
+
+Simply return a vector with names of packages used for development
 }
 \details{
 The list of packages includes:
@@ -22,8 +28,18 @@ Special data formats: stringr, lubridate
 Plotting: grid, gridExtra, ggplot2, GGally, ggthemes, ggExtra, RColorBrewer, VennDiagram, pheatmap, wesanderson
 
 Performance: parallel
+
+The list of packages includes:
+
+Development: Rccp, devtools, roxygen2, pryr, profr
+
+RStudio: rstudioapi, manipulate
+
+Terminal: setwidth, colorout
 }
 \author{
+Malte Thodberg
+
 Malte Thodberg
 }
 
