@@ -16,7 +16,7 @@ hello1 <- function(x, y) {
 
 #' Common Packages
 #'
-#' Simply return a vector with names of most commen packages
+#' Simply return a vector with names of most common packages
 #'
 #' @return Character vector
 #' @author Malte Thodberg
@@ -38,6 +38,31 @@ core_packages <- function(){
 		"parallel") # Performance
 }
 
+#' Bioconductor Packages
+#'
+#' Simply return a vector with names of bioconductor packages
+#'
+#' @return Character vector
+#' @author Malte Thodberg
+#' @details
+#' The list of packages includes:
+#'
+#' Installer: BiocInstaller
+#'
+#' Genomic Arithmetic: Biostrings, IRanges, GenomicRanges, rtracklayer
+#'
+#' Differential Expression: limma, edgeR, DESeq2
+#'
+#' Performance: parallel
+#' @export
+bioc_packages <- function(){
+	c("BiocInstaller", # Package manager
+		"Biostrings", "IRanges", "GenomicRanges", "rtracklayer", # Genomic Arithmetic,
+		"limma", "edgeR", "DESeq2" # DE analysis
+	)
+
+}
+
 #' Silently add packages
 #'
 #' Load packages without any info returned
@@ -50,6 +75,24 @@ silent_library <- function(packages){
 	invisible(sapply(packages, function(x) suppressPackageStartupMessages(require(x, character.only=TRUE))))
 }
 
+#' Setup R
+#'
+#' Load common packages and remove stringsAsFactors.
+#'
+#' @author Malte Thodberg
+#' @details Silently loads packages from common_packages() and bioc_packages(), deactivates stringsAsFactors and gets bioconductor source URL for package manager
+#' @export
+setup_R <- function(){
+	# Disable stringsAsFactors
+	options(stringsAsFactors = FALSE)
+
+	# Update repository manager
+	source("http://bioconductor.org/biocLite.R")
+
+	# Silently load packages
+	silent_library(core_packages())
+	silent_library(bioc_packages())
+}
 
 #' Short length
 #'

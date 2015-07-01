@@ -10,7 +10,7 @@ core_packages()
 Character vector
 }
 \description{
-Simply return a vector with names of most commen packages
+Simply return a vector with names of most common packages
 }
 \details{
 The list of packages includes:
