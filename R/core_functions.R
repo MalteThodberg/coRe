@@ -138,7 +138,7 @@ colVars <- function(d) apply(d, 2, var)
 #' @return character vector containing RGB values
 #' @author Malte Thodberg
 #' @details This function is usefull for creating color gradients for use with base plotting.
-#' @seealso \code{\link{rainbow}} \code{\link{terrain}} \code{\link{heat}} \code{\link{topo}}
+#' @seealso \code{\link{rainbow}} \code{\link{terrain.colors}} \code{\link{heat.colors}} \code{\link{topo.colors}}
 #' @export
 cRamp <- function(x, palette="rainbow", levels=10){
 	# Defined inside to not clutter workspace
