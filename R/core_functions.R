@@ -81,7 +81,7 @@ bioc_packages <- function(){
 code_packages <- function(){
 	c("Rcpp", "devtools", "roxygen2", "pryr", "profr", # Development
 		"rstudioapi", "manipulate", # RStudio
-		"set_width", "colorout") # Terminal
+		"setwidth", "colorout") # Terminal
 }
 
 #' Silently add packages
