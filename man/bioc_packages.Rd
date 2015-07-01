@@ -5,12 +5,18 @@
 \title{Bioconductor Packages}
 \usage{
 bioc_packages()
+
+bioc_packages()
 }
 \value{
+Character vector
+
 Character vector
 }
 \description{
 Simply return a vector with names of bioconductor packages
+
+Simply return a vector with names of packages used for development
 }
 \details{
 The list of packages includes:
@@ -22,8 +28,18 @@ Genomic Arithmetic: Biostrings, IRanges, GenomicRanges, rtracklayer
 Differential Expression: limma, edgeR, DESeq2
 
 Performance: parallel
+
+The list of packages includes:
+
+Development: Rccp, devtools, roxygen2, pryr, profr
+
+RStudio: rstudioapi, manipulate
+
+Terminal: setwidth, colorout
 }
 \author{
+Malte Thodberg
+
 Malte Thodberg
 }
 

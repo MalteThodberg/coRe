@@ -27,14 +27,14 @@ hello1 <- function(x, y) {
 #'
 #' Special data formats: stringr, lubridate
 #'
-#' Plotting: grid, gridExtra, ggplot2, GGally, ggthemes, ggExtra, RColorBrewer, VennDiagram, pheatmap
+#' Plotting: grid, gridExtra, ggplot2, GGally, ggthemes, ggExtra, RColorBrewer, VennDiagram, pheatmap, wesanderson
 #'
 #' Performance: parallel
 #' @export
 core_packages <- function(){
 	c("magrittr", "readr", "tidyr", "dplyr", # Data manipulation
 		"stringr", "lubridate", # Special data formats
-		"grid", "gridExtra", "ggplot2", "GGally", "ggthemes", "ggExtra", "RColorBrewer", "VennDiagram", "pheatmap",	# Plotting
+		"grid", "gridExtra", "ggplot2", "GGally", "ggthemes", "ggExtra", "RColorBrewer", "VennDiagram", "pheatmap",	"wesanderson" ,# Plotting
 		"parallel") # Performance
 }
 
@@ -61,6 +61,27 @@ bioc_packages <- function(){
 		"limma", "edgeR", "DESeq2" # DE analysis
 	)
 
+}
+
+#' Development Packages
+#'
+#' Simply return a vector with names of packages used for development
+#'
+#' @return Character vector
+#' @author Malte Thodberg
+#' @details
+#' The list of packages includes:
+#'
+#' Development: Rccp, devtools, roxygen2, pryr, profr
+#'
+#' RStudio: rstudioapi, manipulate
+#'
+#' Terminal: setwidth, colorout
+#' @export
+bioc_packages <- function(){
+	c("Rcpp", "devtools", "roxygen2", "pryr", "profr", # Development
+		"rstudioapi", "manipulate", # RStudio
+		"set_width", "colorout") # Terminal
 }
 
 #' Silently add packages

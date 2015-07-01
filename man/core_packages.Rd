@@ -19,7 +19,7 @@ Data manipulation: magrittr, readr, tidyr, dplyr
 
 Special data formats: stringr, lubridate
 
-Plotting: grid, gridExtra, ggplot2, GGally, ggthemes, ggExtra, RColorBrewer, VennDiagram, pheatmap
+Plotting: grid, gridExtra, ggplot2, GGally, ggthemes, ggExtra, RColorBrewer, VennDiagram, pheatmap, wesanderson
 
 Performance: parallel
 }
