@@ -2,6 +2,7 @@
 
 export(bioc_packages)
 export(cRamp)
+export(code_packages)
 export(colSds)
 export(colVars)
 export(core_packages)
