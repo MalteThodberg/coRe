@@ -1,10 +1,10 @@
 Package: coRe
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Setup R on new machine
 Version: 0.1
 Date: 2015-07-01
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Author: Malte Thodberg
+Maintainer: <maltethodberg@gmail.com>
+Description: Collections of functions for: common packages (including bioC), useful small functions, functions for preparing enviroment, functions for adding .Rprofile.
+License: GPL-3
 LazyData: TRUE
