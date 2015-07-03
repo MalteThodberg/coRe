@@ -10,9 +10,12 @@ setup_R()
 Load common packages and remove stringsAsFactors.
 }
 \details{
-Silently loads packages from common_packages() and bioc_packages(), deactivates stringsAsFactors and gets bioconductor source URL for package manager
+Silently loads packages from core_packages() and bioc_packages(), deactivates stringsAsFactors and gets bioconductor source URL for package manager
 }
 \author{
 Malte Thodberg
+}
+\seealso{
+\code{\link{create_Rprofile}} \code{\link{core_packages}} \code{\link{bioc_packages}}
 }
 

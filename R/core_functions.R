@@ -1,19 +1,3 @@
-#' Test function
-#'
-#' Print hello world and return list
-#'
-#' @param x the first number
-#' @param y the second number
-#' @return list
-#' @author  Malte Thodberg
-#' @details Comments for basic function
-#' @export
-
-hello1 <- function(x, y) {
-	print("Hello, world!")
-	list(x, y)
-}
-
 #' Common Packages
 #'
 #' Simply return a vector with names of most common packages
@@ -101,7 +85,8 @@ silent_library <- function(packages){
 #' Load common packages and remove stringsAsFactors.
 #'
 #' @author Malte Thodberg
-#' @details Silently loads packages from common_packages() and bioc_packages(), deactivates stringsAsFactors and gets bioconductor source URL for package manager
+#' @details Silently loads packages from core_packages() and bioc_packages(), deactivates stringsAsFactors and gets bioconductor source URL for package manager
+#' @seealso \code{\link{create_Rprofile}} \code{\link{core_packages}} \code{\link{bioc_packages}}
 #' @export
 setup_R <- function(){
 	# Disable stringsAsFactors
@@ -260,7 +245,6 @@ run_loc <- function(){
 #' @details coRe/extdata contains a template for an .Rprofile file for an effective R-setup that does not influence code execution. This file will try to adapt startup settings to whether R is run from a terminal or RStudio.
 #' @seealso \code{\link{setup_R}}
 #' @export
-
 create_Rprofile <- function(){
 	# Files
 	template_fname <- file.path(find.package("coRe"), "extdata/template.R")
