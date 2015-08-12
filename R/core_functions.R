@@ -253,3 +253,57 @@ create_Rprofile <- function(){
 	# Copy file as safely as possibly
 	file.copy(from=template_fname, to=to_fname, overwrite=FALSE, recursive=FALSE)
 	}
+
+#' The Keep Function
+#'
+#' Modified from https://github.com/flor3652/myStuff/blob/master/R/keep.R. This function is designed to keep a given list of variables (as opposed to the rm function, which is designed to remove a list of variables). In addition to the original code, it also forces a gc() garbage collection.
+#'
+#' @param ... Variables that should stay in the environment
+#' @param x A character vector of variables which you wish to keep
+#' @details The function uses the \code{ls} command to find the variables that are defined in the global environment. It then deletes all variables that are not given as an argument.
+#' @author Michael Floren
+#' @seealso \code{\link{rm}} \code{\link{ls}} \code{\link{gc}}
+#' @export
+keep <- function(...,x=c()){
+  # Check if keep variables have been given
+	if(length(x)){
+		if(!is.character(x)) stop("x must contain character vector")
+		rm(list=ls(name=.GlobalEnv)[!ls(name=.GlobalEnv)%in%x], pos=.GlobalEnv)
+		return(invisible(ls(name=.GlobalEnv)))
+	}
+
+	# Parse dots
+	dots <- match.call(expand.dots=FALSE)$...
+
+	if (length(dots) && !all(sapply(dots, function(x) is.symbol(x) ||
+																	is.character(x))))
+		stop("... must contain names or character strings")
+
+	names <- sapply(dots,as.character)
+
+	# Remove all variables, except marked ones
+	rm(list=ls(name=.GlobalEnv)[!ls(name=.GlobalEnv) %in% names], pos=.GlobalEnv)
+
+	# Force garbage collection
+	gc()
+
+	# Invisibly return kept values
+	invisible(ls(name=.GlobalEnv))
+}
+
+#' Deep cleaning of workspace
+#'
+#' Removes all variables in workspace and forces garbage collection.
+#'
+#' @details Uses \code{rm()} to remove all variables from \code{ls()} and collects garbage with \code{gc()}
+#' @return Output from \code{gc()}
+#' @author Malte Thodberg
+#' @seealso \code{\link{rm}} \code{\link{ls}} \code{\link{gc}}
+#' @export
+clear <- function(){
+	# Remove all variables in global enviroment
+	rm(list=ls(name=.GlobalEnv), pos=.GlobalEnv)
+
+	# Force garbage collection
+	gc()
+}
