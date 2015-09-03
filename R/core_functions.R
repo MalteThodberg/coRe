@@ -63,7 +63,7 @@ bioc_packages <- function(){
 #' Terminal: setwidth, colorout
 #' @export
 code_packages <- function(){
-	c("Rcpp", "devtools", "roxygen2", "pryr", "profr", # Development
+	c("Rcpp", "devtools", "roxygen2", "pryr", "profr", "asserthat", # Development
 		"rstudioapi", "manipulate", # RStudio
 		"setwidth", "colorout") # Terminal
 }
