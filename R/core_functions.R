@@ -1,6 +1,6 @@
 #' Common Packages
 #'
-#' Simply return a vector with names of most common packages
+#' Simply return a vector with names of most common packages. Let's see if this is pushed
 #'
 #' @return Character vector
 #' @author Malte Thodberg
