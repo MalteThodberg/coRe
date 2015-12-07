@@ -41,7 +41,7 @@ core_packages <- function(){
 #' @export
 bioc_packages <- function(){
 	c("BiocInstaller", # Package manager
-		"Biostrings", "IRanges", "GenomicRanges", "rtracklayer", # Genomic Arithmetic,
+		"Biostrings", "IRanges", "GenomicRanges", "SummarizedExperiment", "rtracklayer", # Genomic Arithmetic,
 		"limma", "edgeR", "DESeq2" # DE analysis
 	)
 
