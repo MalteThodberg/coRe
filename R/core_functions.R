@@ -18,7 +18,7 @@
 core_packages <- function(){
 	c("magrittr", "readr", "tidyr", "dplyr", # Data manipulation
 		"stringr", "lubridate", # Special data formats
-		"grid", "gridExtra", "ggplot2", "GGally", "ggthemes", "ggExtra", "RColorBrewer", "VennDiagram", "pheatmap",	"wesanderson" ,# Plotting
+		"grid", "gridExtra", "ggplot2", "GGally", "ggthemes", "ggExtra", "RColorBrewer", "VennDiagram", "pheatmap",	"wesanderson", "viridis",# Plotting
 		"parallel") # Performance
 }
 
