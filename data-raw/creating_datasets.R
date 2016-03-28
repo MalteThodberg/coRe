@@ -1,5 +1,5 @@
 # Common packages
-core_packages <- c("magrittr", "readr", "tidyr", "dplyr", "tibble", "purr", # Data manipulation
+core_packages <- c("magrittr", "readr", "tidyr", "dplyr", "tibble", "purrr", # Data manipulation
 	"stringr", "lubridate", # Special data formats
 	"grid", "gridExtra", "ggplot2", "GGally", "ggthemes", "ggExtra", "ggrepel", "RColorBrewer", "VennDiagram", "pheatmap",	"wesanderson", "viridis",# Plotting
 	"matrixStats", "parallel")
