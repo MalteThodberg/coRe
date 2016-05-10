@@ -30,17 +30,17 @@ options(max.print = 1000)
 		if(Sys.getenv("RSTUDIO") == 1){
 			require("rstudioapi")
 			require("manipulate")
-			cat("Starting RStudio-session:", date(), "\n")
+			cat("Starting RStudio-session:", base::date(), "\n")
 		}else if(Sys.getenv("TERM") == "xterm-256color"){
 			require("colorout")
 			require("setwidth")
-			cat("Starting Rxterm256-session:", date(), "\n")
+			cat("Starting Rxterm256-session:", base::date(), "\n")
 		}else if(Sys.getenv("TERM") == "xterm"){
 			require("colorout")
 			require("setwidth")
-			cat("Starting Rxterm-session:", date(), "\n")
+			cat("Starting Rxterm-session:", base::date(), "\n")
 		}else{
-			cat("Starting R-session:", date(), "\n")
+			cat("Starting R-session:", base::date(), "\n")
 		}
 	}
 }
@@ -48,13 +48,13 @@ options(max.print = 1000)
 .Last <- function() {
 	if(interactive()){
 		if(Sys.getenv("RSTUDIO") == 1){
-			cat("Ending RStudio-session:", date(), "\n")
+			cat("Ending RStudio-session:", base::date(), "\n")
 		}else if(Sys.getenv("TERM") == "xterm-256color"){
-			cat("Ending Rxterm256-session:", date(), "\n")
+			cat("Ending Rxterm256-session:", base::date(), "\n")
 		}else if(Sys.getenv("TERM") == "xterm"){
-			cat("Ending Rxterm-session:", date(), "\n")
+			cat("Ending Rxterm-session:", base::date(), "\n")
 		}else{
-			cat("Ending R-session:", date(), "\n")
+			cat("Ending R-session:", base::date(), "\n")
 		}
 	}
 }
