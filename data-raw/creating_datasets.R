@@ -14,7 +14,7 @@ bioc_packages <- c("BiocInstaller", # Package manager
 devtools::use_data(bioc_packages, overwrite=TRUE)
 
 # Developments packages
-code_packages <- c("Rcpp", "devtools", "roxygen2", "pryr", "profr", "asserthat", # Development
+code_packages <- c("Rcpp", "devtools", "roxygen2", "pryr", "profr", "assertthat", # Development
 		"rstudioapi", "manipulate", # RStudio
 		"setwidth", "colorout") # Terminal
 
