@@ -8,6 +8,7 @@ Maintainer: <maltethodberg@gmail.com>
 Description: Collections of functions for: common packages (including bioC),
     useful small functions, functions for preparing enviroment, functions for
     adding .Rprofile.
+Imports: rstudioapi
 License: GPL-3
 LazyData: TRUE
 RoxygenNote: 5.0.1
